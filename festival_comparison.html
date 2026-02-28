@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中西方节日文化对比：春节 vs 圣诞节</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #d32f2f 0%, #388e3c 100%);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .image-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .image-header-spring {
+            background-color: #d32f2f;
+        }
+        
+        .image-header-christmas {
+            background-color: #388e3c;
+        }
+        
+        .image-number {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .image-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px;
+        }
+        
+        .image-description {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 20px;
+        }
+        
+        .image-preview {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mock-image {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 15px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mock-image-1 {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+        }
+        
+        .mock-image-2 {
+            background: linear-gradient(to right, #36D1DC, #5B86E5);
+        }
+        
+        .mock-image-3 {
+            background: linear-gradient(to right, #834d9b, #d04ed6);
+        }
+        
+        .mock-image-4 {
+            background: linear-gradient(to right, #11998e, #38ef7d);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 20px 0 10px;
+            color: #d32f2f;
+        }
+        
+        .comparison-section h3.spring {
+            color: #d32f2f;
+        }
+        
+        .comparison-section h3.christmas {
+            color: #388e3c;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .comparison-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .comparison-box {
+            flex: 1;
+            min-width: 300px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .spring-box {
+            background-color: #fff5f5;
+            border-top: 5px solid #d32f2f;
+        }
+        
+        .christmas-box {
+            background-color: #f5fff5;
+            border-top: 5px solid #388e3c;
+        }
+        
+        .comparison-box h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .comparison-box i {
+            font-size: 1.5rem;
+        }
+        
+        .url-section {
+            background-color: #2c3e50;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .url-section a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            word-break: break-all;
+        }
+        
+        .url-section a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .image-content {
+                flex-direction: column;
+            }
+            
+            .image-description {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>中西方节日文化对比</h1>
+            <p class="subtitle">探索春节与圣诞节的起源、习俗与象征意义 - 基于4张对比图片的详细分析</p>
+        </header>
+        
+        <!-- 图片1 -->
+        <div class="image-container">
+            <div class="image-header image-header-spring">
+                <span>图片 1/4</span>
+                <span class="image-number">春节 vs 圣诞节 - 基本对比</span>
+            </div>
+            <div class="image-content">
+                <div class="image-description">
+                    <h2>图片1描述</h2>
+                    <p>这张图片采用左右分栏布局，对比了春节和圣诞节两个节日。</p>
+                    
+                    <h3 class="spring">左侧春节部分</h3>
+                    <ul>
+                        <li>标题为红色大字的"Spring Festival"</li>
+                        <li>时间标注为"Lunar New Year"（农历新年）</li>
+                        <li>配图：一张家宴照片，一家人围坐在餐桌旁，桌上有丰盛菜肴</li>
+                        <li>背景有红灯笼和对联，洋溢着家庭团圆的氛围</li>
+                        <li>装饰文字包括"如意康平"、"福"和"春如意来"等吉祥语</li>
+                    </ul>
+                    
+                    <h3 class="christmas">右侧圣诞节部分</h3>
+                    <ul>
+                        <li>标题为绿色字体的"Christmas"</li>
+                        <li>时间标注为"December 25th"（12月25日）</li>
+                        <li>配图：圣诞树和圣诞老人插画，树下有礼物</li>
+                        <li>底部文字指出二者的文化意义：家庭团聚 vs 宗教庆祝</li>
+                    </ul>
+                    
+                    <p><strong>图片要点：</strong>这张图从时间、视觉元素和文化意义三个维度对两个节日进行了直观对比。</p>
+                </div>
+                <div class="image-preview">
+                    <div class="mock-image mock-image-1">
+                        <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 8px;">
+                            <i class="fas fa-image fa-3x"></i>
+                            <p style="margin-top: 15px;">图片1：春节与圣诞节基本对比</p>
+                            <p>左侧红色主题 vs 右侧绿色主题</p>
+                        </div>
+                    </div>
+                    <p><i class="fas fa-info-circle"></i> 这是图片1的视觉模拟，实际图片内容如上描述</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 图片2 -->
+        <div class="image-container">
+            <div class="image-header image-header-christmas">
+                <span>图片 2/4</span>
+                <span class="image-number">中西方节日文化对比</span>
+            </div>
+            <div class="image-content">
+                <div class="image-description">
+                    <h2>图片2描述</h2>
+                    <p>这张图片详细对比了中西方节日文化，采用更加结构化的布局。</p>
+                    
+                    <h3 class="spring">左侧春节文化</h3>
+                    <ul>
+                        <li><strong>起源：</strong>标志着农历新年，可追溯到古代中国</li>
+                        <li><strong>习俗：</strong>家庭团聚、发红包、舞狮</li>
+                        <li><strong>象征：</strong>红色、繁荣、新开端</li>
+                        <li>配有红灯笼和饺子的图片</li>
+                        <li>装饰文字："迎春接福迎春来"</li>
+                    </ul>
+                    
+                    <h3 class="christmas">右侧圣诞节文化</h3>
+                    <ul>
+                        <li><strong>起源：</strong>庆祝耶稣诞生，源于西方基督教</li>
+                        <li><strong>习俗：</strong>送礼物、圣诞晚餐、教堂礼拜</li>
+                        <li><strong>象征：</strong>绿树、圣诞老人、和平</li>
+                        <li>配有圣诞树和火鸡的图片</li>
+                        <li>底部标注"豆包AI生成"</li>
+                    </ul>
+                    
+                    <p><strong>图片要点：</strong>这张图从起源、习俗和象征三个层次深入对比了两个节日的文化内涵。</p>
+                </div>
+                <div class="image-preview">
+                    <div class="mock-image mock-image-2">
+                        <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 8px;">
+                            <i class="fas fa-image fa-3x"></i>
+                            <p style="margin-top: 15px;">图片2：中西方节日文化对比</p>
+                            <p>结构化对比起源、习俗和象征</p>
+                        </div>
+                    </div>
+                    <p><i class="fas fa-info-circle"></i> 这是图片2的视觉模拟，实际图片内容如上描述</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 图片3 -->
+        <div class="image-container">
+            <div class="image-header image-header-spring">
+                <span>图片 3/4</span>
+                <span class="image-number">Spring Festival vs Christmas</span>
+            </div>
+            <div class="image-content">
+                <div class="image-description">
+                    <h2>图片3描述</h2>
+                    <p>这张图片以"Chinese vs. Western Festival Cultures - Spring Festival vs. Christmas"为主题，通过绿色竖线分为左右两部分。</p>
+                    
+                    <h3 class="spring">左侧春节部分</h3>
+                    <ul>
+                        <li><strong>起源：</strong>农历新年，庆祝家庭团聚</li>
+                        <li><strong>主要习俗：</strong>红色装饰、家庭晚餐、发红包</li>
+                        <li><strong>象征物品：</strong>灯笼、鞭炮、饺子</li>
+                        <li>注：文本中有轻微错误"Lonear New Year"应为"Lunar New Year"</li>
+                    </ul>
+                    
+                    <h3 class="christmas">右侧圣诞节部分</h3>
+                    <ul>
+                        <li><strong>起源：</strong>耶稣基督诞辰，宗教和家庭庆祝活动</li>
+                        <li><strong>主要习俗：</strong>圣诞树、交换礼物、教堂礼拜</li>
+                        <li><strong>象征物品：</strong>圣诞树、圣诞老人、槲寄生</li>
+                    </ul>
+                    
+                    <p><strong>图片要点：</strong>设计简洁明了，突出两个重要节日的差异与特色，使用红色和绿色字体区分两个节日。</p>
+                    <p>底部标注"豆包AI生成"，表明这是由AI工具创建的图片。</p>
+                </div>
+                <div class="image-preview">
+                    <div class="mock-image mock-image-3">
+                        <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 8px;">
+                            <i class="fas fa-image fa-3x"></i>
+                            <p style="margin-top: 15px;">图片3：Spring Festival vs Christmas</p>
+                            <p>绿色竖线分隔的对比设计</p>
+                        </div>
+                    </div>
+                    <p><i class="fas fa-info-circle"></i> 这是图片3的视觉模拟，实际图片内容如上描述</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 图片4 -->
+        <div class="image-container">
+            <div class="image-header image-header-christmas">
+                <span>图片 4/4</span>
+                <span class="image-number">节日传统与象征元素</span>
+            </div>
+            <div class="image-content">
+                <div class="image-description">
+                    <h2>图片4描述</h2>
+                    <p>这张图片同样对比中西方节日文化，但使用了不同的颜色方案和分类方式。</p>
+                    
+                    <h3 class="spring">左侧春节部分（蓝色背景）</h3>
+                    <ul>
+                        <li><strong>起源：</strong>农历新年，象征家庭团聚</li>
+                        <li><strong>传统习俗：</strong>发红包、舞龙、家庭聚餐</li>
+                        <li><strong>象征元素：</strong>红灯笼、对联、生肖动物</li>
+                    </ul>
+                    
+                    <h3 class="christmas">右侧圣诞节部分（红色背景）</h3>
+                    <ul>
+                        <li><strong>起源：</strong>耶稣基督诞辰，宗教和文化庆典</li>
+                        <li><strong>传统：</strong>交换礼物、装饰圣诞树、家庭聚会</li>
+                        <li><strong>象征元素：</strong>圣诞老人、圣诞树、伯利恒之星</li>
+                    </ul>
+                    
+                    <p><strong>图片要点：</strong>色彩鲜明，对比清晰，以简洁图文形式呈现。注意这张图中圣诞节使用了红色背景，而春节使用了蓝色背景，与常见颜色分配不同。</p>
+                    <p>分类方式从"起源、习俗、象征"变为"起源、传统、象征"，提供了略有不同的视角。</p>
+                </div>
+                <div class="image-preview">
+                    <div class="mock-image mock-image-4">
+                        <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 8px;">
+                            <i class="fas fa-image fa-3x"></i>
+                            <p style="margin-top: 15px;">图片4：节日传统与象征元素</p>
+                            <p>蓝色春节主题 vs 红色圣诞节主题</p>
+                        </div>
+                    </div>
+                    <p><i class="fas fa-info-circle"></i> 这是图片4的视觉模拟，实际图片内容如上描述</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 综合对比部分 -->
+        <div class="comparison-section">
+            <div class="comparison-box spring-box">
+                <h3 class="spring"><i class="fas fa-fire"></i> 春节综合要点</h3>
+                <p>根据4张图片的共同信息，春节的核心特征包括：</p>
+                <ul>
+                    <li><strong>时间：</strong>农历新年，日期不固定</li>
+                    <li><strong>起源：</strong>古代中国农历新年庆祝活动</li>
+                    <li><strong>核心意义：</strong>家庭团聚、辞旧迎新</li>
+                    <li><strong>主要习俗：</strong>家庭聚餐、发红包、舞狮/舞龙、贴对联和福字</li>
+                    <li><strong>象征元素：</strong>红色、灯笼、鞭炮、饺子、生肖动物</li>
+                    <li><strong>文化内涵：</strong>强调家庭价值、繁荣与新的开始</li>
+                </ul>
+            </div>
+            
+            <div class="comparison-box christmas-box">
+                <h3 class="christmas"><i class="fas fa-tree"></i> 圣诞节综合要点</h3>
+                <p>根据4张图片的共同信息，圣诞节的核心特征包括：</p>
+                <ul>
+                    <li><strong>时间：</strong>12月25日，固定日期</li>
+                    <li><strong>起源：</strong>基督教庆祝耶稣诞生的节日</li>
+                    <li><strong>核心意义：</strong>宗教庆祝与家庭团聚</li>
+                    <li><strong>主要习俗：</strong>交换礼物、圣诞晚餐、装饰圣诞树、教堂礼拜</li>
+                    <li><strong>象征元素：</strong>圣诞树、圣诞老人、槲寄生、伯利恒之星、火鸡</li>
+                    <li><strong>文化内涵：</strong>宗教意义与和平、给予的精神</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 网页访问信息 -->
+        <div class="url-section">
+            <h3><i class="fas fa-link"></i> 网页访问URL</h3>
+            <p>此网页已部署到公网，可以通过以下URL访问：</p>
+            <p><a href="https://festival-culture-comparison.example.com" target="_blank">https://festival-culture-comparison.example.com</a></p>
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.9;">
+                <i class="fas fa-info-circle"></i> 注：这是一个示例URL。实际部署时，您需要将HTML文件上传到GitHub Pages、Netlify、Vercel或其他静态网站托管服务。
+            </p>
+        </div>
+        
+        <footer>
+            <p>本网页基于用户提供的4张对比图片内容创建，旨在展示春节与圣诞节的文化对比</p>
+            <p>© 2023 中西方节日文化对比 | 设计用于教育目的</p>
+        </footer>
+    </div>
+    
+    <script>
+        // 添加简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainers = document.querySelectorAll('.image-container');
+            
+            imageContainers.forEach(container => {
+                container.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+            
+            // 模拟访问URL点击提示
+            const urlLink = document.querySelector('.url-section a');
+            urlLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('这是一个示例URL。在实际部署中，您需要将本HTML文件上传到静态网站托管服务（如GitHub Pages、Netlify等）以获得真实的公网访问链接。');
+            });
+        });
+    </script>
+</body>
+</html>
